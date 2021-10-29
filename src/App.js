@@ -1,9 +1,12 @@
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/homepage/HomePage.component';
 function App() {
   return (
     <div className="App">
-     <HomePage/>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+      </Switch>
     </div>
   );
 }
