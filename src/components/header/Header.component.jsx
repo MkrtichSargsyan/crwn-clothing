@@ -6,6 +6,7 @@ import { auth } from '../../firebase/firebase.utils';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import CartIcon from '../cart-icon/CartIcon.component';
 
 function Header({ currentUser }) {
   return (
@@ -29,11 +30,12 @@ function Header({ currentUser }) {
             SIGN IN
           </Link>
         )}
+        <CartIcon />
       </div>
     </div>
   );
 }
- const mapStateToProps = state => ({
-   currentUser: state.user.current_user
- })
+const mapStateToProps = (state) => ({
+  currentUser: state.user.current_user,
+});
 export default connect(mapStateToProps)(Header);
